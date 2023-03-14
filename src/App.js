@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Stories from 'react-insta-stories';
 function App() {
+  const stories = [
+    "https://review2020.s3.us-east-1.amazonaws.com/1678577830143input%20with%20label.png",
+    "https://review2020.s3.us-east-1.amazonaws.com/1678580586441Input%20with%20validation%20erro.png",
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Stories
+			stories={stories}
+			defaultInterval={1500}
+			width={432}
+			height={768}
+		/>
     </div>
   );
 }
